@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- ![Live site here](https://glexan14.github.io/Launch-countdown-timer/)
-- ![My FrontEnd Mentor solution here](https://www.frontendmentor.io/solutions/a-newbies-solution-html-css-and-pure-javascript-5XOhvsh-1)
+- [Live site here](https://glexan14.github.io/Launch-countdown-timer/)
+- [My FrontEnd Mentor solution here](https://www.frontendmentor.io/solutions/a-newbies-solution-html-css-and-pure-javascript-5XOhvsh-1)
 
 ## My process
 
