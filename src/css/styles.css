@@ -1,0 +1,315 @@
+
+/** Google fonts **/
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text&display=swap');
+
+/** CSS variables **/
+:root{
+
+    /** Layout **/
+    --width-desktop: 90rem;
+    --width-mobile: 23.44rem;
+
+    /** Colors **/
+
+    /* Primary */
+    --grayish-blue: hsl(237, 18%, 59%);
+    --soft-red: hsl(345, 95%, 68%);
+
+    /* Neutral */
+    --white: hsl(0, 0%, 100%);
+    --Dark-desaturated-blue: hsl(236, 21%, 26%);
+    --very-dark-blue: hsl(235, 16%, 14%);
+    --mostly-dark-blue:  hsl(234, 17%, 12%);
+
+    /** Font **/
+    --body-font: 'Red Hat Text', sans-serif;
+    --font-size: 0.875rem;
+    --font-weight: 900;
+
+}
+
+/** General **/
+
+* {
+   
+    outline: 0; 
+    box-sizing: border-box;
+    transition: all .5s;
+}
+
+body {
+    
+    font-family: var(--body-font);
+    font-weight: var(--font-weight);
+    background: var(--mostly-dark-blue);
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    color: var(--white);
+
+
+}
+
+.container {
+    position: relative;
+    background-image: url(../images/bg-stars.svg);
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+/** Header **/
+
+header{
+    width: 100%;
+    min-height: 10rem;
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    
+}
+
+header .title{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.title span{
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 2pt;
+}
+
+/** Main **/
+
+main {
+    position: relative;
+    width: 100%;
+    min-height: calc(100vh - 22rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
+main .temporizer-container{
+    position: relative;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    
+}
+
+.temporizer-container .time-container{
+    position: relative;
+    width: 50%;
+    height: 12rem;
+    min-height: 12rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 1rem;
+    padding: 1%;
+    
+    
+}
+
+.time-container .time-number{
+    position: relative;
+    width: 100%;
+    min-height: 8rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--soft-red);
+    background-color: var(--Dark-desaturated-blue);
+    border: 1px solid #111;
+    border-radius: 5px;
+    padding: 1%;
+    z-index: 1;
+}
+
+.time-container .time-number .gradient{
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    top: 0;
+    opacity: .4;
+    background-color: var(--mostly-dark-blue);
+    border-bottom: 2px solid #111;
+    z-index: 10;
+}
+
+
+.time-container .time-number span{
+    font-size: 5rem;
+    font-weight: bolder;
+    
+}
+.time-container .time-text{
+    width: 100%;
+    margin: 1rem 0;
+    color: var(--grayish-blue);
+    text-align: center;
+    font-size: .9rem;
+    letter-spacing: 1pt;
+    text-transform: uppercase;
+    
+}
+
+
+
+/** Footer **/
+
+footer{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 10rem;
+    background-image: url(../images/pattern-hills.svg);
+    background-size: cover;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+footer .social{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    
+}
+
+footer .social a i{
+    width: 100%;
+    color: var(--grayish-blue);
+    font-size: 2rem;
+    margin: 0 2rem;
+    transition: .2s;
+}
+
+footer .social a:hover i{
+    color: var(--soft-red);
+    
+}
+    
+
+.attribution { 
+    font-size: .8rem; 
+    text-align: center; 
+    height: 30%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    
+}
+
+.attribution a { 
+    color: hsl(228, 91%, 68%); 
+}
+
+/** Media querys**/
+@media screen and (max-width: 1024px){
+
+    header{
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 1000px){
+
+    /**General **/
+
+    body{
+        overflow-y: scroll;
+    }
+    .container{
+        
+        height: 100%;
+        overflow-x: hidden;
+    }
+    /**header**/
+    header{
+        min-height: 5rem;
+        align-items: center;
+    }
+
+    /** main **/
+    main{
+        min-height: calc(100vh - 12rem);
+    }
+
+    main .temporizer-container{
+        width: 90%;
+    }
+
+    .temporizer-container .time-container{
+        width: 100%;
+        height: 100%;
+        min-height: 100%;
+        
+    }
+
+    .time-container .time-number{
+        min-height: 100%;
+    }
+
+    .time-container .time-number span{
+        font-size: 4.5rem;
+        
+        
+    }
+
+   /** Footer **/
+
+    footer{
+        min-height: 5rem;
+    }
+    footer .social{
+        
+        align-items: center;
+        
+    }
+
+}
+
+@media screen and (max-width: 500px){
+
+    /** Main **/
+    
+    main .temporizer-container{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .temporizer-container .time-container{
+        width: 40%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    
+}
