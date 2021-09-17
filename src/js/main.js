@@ -1,6 +1,6 @@
 
 //Change the date here
-const fechaContador = new Date('jun 1, 2021 18:00:00').getTime(); //remaining time to july arrival
+const fechaContador = new Date('dec 1, 2021 18:00:00').getTime(); //remaining time to july arrival
 
 
 
